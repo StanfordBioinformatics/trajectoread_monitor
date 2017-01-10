@@ -7,6 +7,10 @@ The monitor scripts are designed to track and analyze Stanford Sequencing Center
      
 - monthly_seq_stats.R: Create R plots describing monthly sequencing output. Plots are generated from files created by monthly_seq_stats.py.
 
+## Output
+
+![Sequencing Center Output 2013-2016](https://cloud.githubusercontent.com/assets/14796101/21828654/8415c95a-d746-11e6-93c5-1b6abbb5d384.png)
+
 ## Usage
 To run the python script to gather data and then automatically generate plots:
 
@@ -19,6 +23,3 @@ Or to run the Rscript indepedently:
 
     0       12      1       *       *       bash -l -c "python /usr/local/autocopy/cron_scripts/monthly_seq_stats.py -c
 
-## Output
-
-![Sequencing Center Output 2013-2016](https://cloud.githubusercontent.com/assets/14796101/21828654/8415c95a-d746-11e6-93c5-1b6abbb5d384.png)
