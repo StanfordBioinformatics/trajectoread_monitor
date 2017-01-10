@@ -13,4 +13,4 @@ The monitor scripts are designed to track and analyze Stanford Sequencing Center
 
 ## Output
 
-[Sequencing Center Output 2013-2016](https://cloud.githubusercontent.com/assets/14796101/21828654/8415c95a-d746-11e6-93c5-1b6abbb5d384.png)
+![Sequencing Center Output 2013-2016](https://cloud.githubusercontent.com/assets/14796101/21828654/8415c95a-d746-11e6-93c5-1b6abbb5d384.png)
