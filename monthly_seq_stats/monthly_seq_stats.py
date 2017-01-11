@@ -154,7 +154,14 @@ def main():
 
     # Dev: NEED TO QC THIS
     after_date = '%d-%d-01' % (year, month)
-    before_date = '%d-%d-01' % (year, int(month + 1))
+    if month > 1 and month < 12:
+        before_date = '%d-%d-01' % (year, int(month + 1))
+    elif month == 12:
+        before_date = '%d-1-01' % int(year+1)
+    else:
+        print 'Error: invalid month %d' % month 
+        sys.exit()
+
     print 'After: %s' % after_date
     print 'Before: %s ' % before_date
 

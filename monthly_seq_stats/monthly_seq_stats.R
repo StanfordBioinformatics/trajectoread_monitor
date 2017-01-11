@@ -62,14 +62,14 @@ make_base_count_plots <- function(data, out) {
   ggsave(file = paste(out, '_bases_overlap_exome.png', sep=''), width=14.4, height=8.1)
   
   # Generate stacked exome plot
-  ggplot(data, aes(x=Month, y=Whole_Exome_Count, fill=factor(Year))) + 
+  ggplot(data, aes(x=Month, y=Whole_Exome_Count, fill=factor(Seq_Type))) + 
     geom_area(alpha=0.6, position='stack') +
     theme(axis.text=element_text(size=18), axis.title=element_text(size=24), title=element_text(size=24), 
           legend.text=element_text(size=18), legend.title=(element_text(size=24)),
           legend.margin=unit(0.5, "cm"), plot.margin=unit(c(1,1,1,1), "cm")) +
-    labs(title = "Monthly Sequencing Center Production", y = "Equivalent Whole Exomes", x = "Month") +
+    labs(title = "2016 Sequencing Center Production on DNAnexus", y = "Equivalent Whole Exomes", x = "Month") +
     scale_x_continuous(breaks=seq(1, 12, by=1)) +
-    scale_fill_discrete(name="Year")
+    scale_fill_discrete(name="Platform")
   ggsave(file = paste(out, '_bases_stack_exome.png', sep=''), width=14.4, height=8.1)
 }
 
@@ -152,8 +152,8 @@ main <- function() {
   data = cbind(data, Terabase_Count, Gigaread_Count, Whole_Exome_Count)
   
   # Order data
-  #ordered_data = data[order(data$Year, data$Month, data$Seq_Type),]
-  ordered_data = data[order(data$Year, data$Month),]
+  ordered_data = data[order(data$Year, data$Month, data$Seq_Type),]
+  #ordered_data = data[order(data$Year, data$Month),]
   
   make_base_count_plots(ordered_data, out)
   #make_lane_count_plots(ordered_data, out)
