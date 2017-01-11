@@ -11,6 +11,8 @@ The monitor scripts are designed to track and analyze Stanford Sequencing Center
 
 ![Sequencing Center Output 2013-2016](https://cloud.githubusercontent.com/assets/14796101/21828654/8415c95a-d746-11e6-93c5-1b6abbb5d384.png)
 
+![2016 Production by Platform](https://cloud.githubusercontent.com/assets/14796101/21830519/0ef8427c-d752-11e6-9d7e-3c2107ca0191.png)
+
 ## Usage
 To run the python script to gather data and then automatically generate plots:
 
